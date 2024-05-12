@@ -7,13 +7,13 @@
 }
 body{
     height: 100vh;
-    background: #066acd;
+    background: #ffffff;
 }
 .container{
     width: 40%;
     top: 50%;
     left: 50%;
-    background: white;
+    background: #4F5D75;
     border-radius: 10px;
     min-width: 450px;
     position: absolute;
@@ -28,7 +28,7 @@ body{
     width: 75%;
     height: 45px;
     padding: 12px;
-    color: #111111;
+    color: black;
     font-weight: 500;
     position: relative;
     border-radius: 5px;
@@ -39,16 +39,16 @@ body{
 
 #newtask input:focus{
     outline: none;
-    border-color: #0d75ec;
+    border-color: #EF8354;
 }
 #newtask button{
     position: relative;
     float: right;
     font-weight: 500;
     font-size: 16px;
-    background-color: #0d75ec;
+    background-color: #EF8354;
     border: none;
-    color: #ffffff;
+    color: #FFFFFF;
     cursor: pointer;
     outline: none;
     width: 20%;
@@ -60,7 +60,7 @@ body{
     border-radius: 10px;
     width: 100%;
     position: relative;
-    background-color: #ffffff;
+    background-color: #4F5D75;
     padding: 30px 20px;
     margin-top: 10px;
 }
@@ -69,7 +69,7 @@ body{
     border-radius: 5px;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #939697;
+    border: 1px solid yellow;
     cursor: pointer;
     background-color: #c5e1e6;
     height: 50px;
