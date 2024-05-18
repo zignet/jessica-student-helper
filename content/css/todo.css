@@ -8,10 +8,12 @@
 .page{
     margin: 2%;
 }
+
 body{
     height: 100vh;
     background: #ffffff;
 }
+
 .container{
     width: 40%;
     top: 50%;
@@ -23,10 +25,12 @@ body{
     min-height: 100px;
     transform: translate(-50%,-50%);
 }
+
 #newtask{
     position: relative;
     padding: 30px 20px;
 }
+
 #newtask input{
     width: 75%;
     height: 45px;
@@ -44,6 +48,7 @@ body{
     outline: none;
     border-color: #EF8354;
 }
+
 #newtask button{
     position: relative;
     float: right;
@@ -59,6 +64,7 @@ body{
     border-radius: 5px;
     font-family: 'Poppins',sans-serif;
 }
+
 #tasks{
     border-radius: 10px;
     width: 100%;
@@ -80,11 +86,13 @@ body{
     padding: 5px 10px;
     display: flex;
 }
+
 .task span{
     font-family: 'Poppins',sans-serif;
     font-size: 15px;
     font-weight: 400;
 }
+
 .task button{
     background-color: #6583e5;
     color: #ffffff;
@@ -95,6 +103,7 @@ body{
     width: 40px;
     border-radius: 5px;
 }
+
 button:hover{
     opacity: .7;
 }

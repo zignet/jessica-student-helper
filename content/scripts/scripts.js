@@ -11,3 +11,11 @@ function showPage(pageId) {
         pageToShow.classList.add('active');
     }
 }
+document.addEventListener('DOMContentLoaded', (event) => {
+    const button = document.getElementById('clickButton');
+    const sound = document.getElementById('clickSound');
+    
+    button.addEventListener('click', () => {
+        sound.play();
+    });
+});

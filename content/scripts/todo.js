@@ -14,7 +14,7 @@ document.querySelector('#push').onclick = function(){
                 </button>
             </div>
         `;
-
+        
         var current_tasks = document.querySelectorAll(".delete");
         for(var i=0; i<current_tasks.length; i++){
             current_tasks[i].onclick = function(){
@@ -23,3 +23,19 @@ document.querySelector('#push').onclick = function(){
         }
     }
 }
+document.addEventListener('DOMContentLoaded', (event) => {
+    const button = document.getElementByClass('delete');
+    const sound = document.getElementById('clickdeleteSound');
+    
+    button.addEventListener('click', () => {
+        sound.play();
+    });
+});
+document.addEventListener('DOMContentLoaded', (event) => {
+    const button = document.getElementById('push');
+    const sound = document.getElementById('clickaddSound');
+    
+    button.addEventListener('click', () => {
+        sound.play();
+    });
+});
