@@ -21,21 +21,20 @@ document.querySelector('#push').onclick = function(){
                 this.parentNode.remove();
             }
         }
+        const sounddel = document.getElementById('clickdeleteSound');
+        for (const button of document.getElementsByClassName('delete')){
+            button.addEventListener('click', () => {
+                sounddel.play();
+            });
+        }
     }
 }
-document.addEventListener('DOMContentLoaded', (event) => {
-    const button = document.getElementByClass('delete');
-    const sound = document.getElementById('clickdeleteSound');
-    
-    button.addEventListener('click', () => {
-        sound.play();
-    });
-});
+
 document.addEventListener('DOMContentLoaded', (event) => {
     const button = document.getElementById('push');
     const sound = document.getElementById('clickaddSound');
     
     button.addEventListener('click', () => {
         sound.play();
-    });
+    });    
 });
