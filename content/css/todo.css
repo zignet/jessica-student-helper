@@ -2,8 +2,11 @@
 *:before,
 *:after{
     padding: 0;
-    margin: 0;
     box-sizing: border-box;
+}
+
+.page{
+    margin: 2%;
 }
 body{
     height: 100vh;
@@ -69,7 +72,7 @@ body{
     border-radius: 5px;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid yellow;
+    border: 1px solid #6583e5;
     cursor: pointer;
     background-color: #c5e1e6;
     height: 50px;
@@ -91,4 +94,7 @@ body{
     height: 100%;
     width: 40px;
     border-radius: 5px;
+}
+button:hover{
+    opacity: .7;
 }
