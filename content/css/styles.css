@@ -34,6 +34,10 @@ nav ul li a {
   text-decoration: none;
 }
 
+nav ul li a:hover {
+  opacity: 70%;
+}
+
 .page {
   flex: 1;
   display: flex;
@@ -44,13 +48,31 @@ nav ul li a {
 }
 
 .content {
-  max-width: 45%;
-  padding-left: 15%;
-  padding-right: 15%;
-  padding-top: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 1%;
 }
 
 h1 {
   font-family: Baskerville, serif;
   font-size: 250%;
+}
+
+img {
+  width: 30%;
+  place-content: center;
+  border: 1px solid black;
+  border-radius: 4px
+}
+
+img:hover{
+  opacity: 60%;
+}
+
+button a {
+  color: white;
+}
+button {
+  background-color: #7c98b3;
+  border-radius: 10%;
 }
