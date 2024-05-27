@@ -1,4 +1,4 @@
- document.querySelector('#push').onclick = function(){
+document.querySelector('#push').onclick = function(){
     if(document.querySelector('#newtask input').value.length == 0){
         alert("Kindly Enter Task Name!!!!")
     }
@@ -21,5 +21,20 @@
                 this.parentNode.remove();
             }
         }
+        const sounddel = document.getElementById('clickdeleteSound');
+        for (const button of document.getElementsByClassName('delete')){
+            button.addEventListener('click', () => {
+                sounddel.play();
+            });
+        }
     }
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const button = document.getElementById('push');
+    const sound = document.getElementById('clickaddSound');
+
+    button.addEventListener('click', () => {
+        sound.play();
+    });
+});
