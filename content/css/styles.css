@@ -84,3 +84,9 @@ button {
  button:hover {
   opacity: 80%;
  }
+
+ svg {
+  width: 3%;
+  height: 3%;
+  fill: #ffffff;
+ }
