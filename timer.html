@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
     <link rel="stylesheet" href="content/css/styles.css">
+    <link rel="stylesheet" href="content/css/timer.css">
 </head>
 <body>
   <header>
@@ -19,11 +20,25 @@
   </header>
 
     <main>
-        <div id="timer" class="page">
-          <h1>This is the Timer</h1>
+        <div id="timerContent" class="container">
+          <div>
+            <input class="timerInput" type="number" id="hours" placeholder="HH" min="0"> :
+            <input class="timerInput" type="number" id="minutes" placeholder="MM" min="0" max="59"> :
+            <input class="timerInput" type="number" id="seconds" placeholder="SS" min="0" max="59">
+          </div>
+
+          <div id="timer">00:00:00</div>
+
+          <div>
+            <button class="timerButton"  onclick="startTimer()">Start</button>
+            <button class="timerButton" onclick="pauseTimer()">Pause</button>
+            <button class="timerButton" onclick="resetTimer()">Reset</button>
+          </div>
+
         </div>
     </main>
 
     <script src="content/scripts/scripts.js"></script>
+    <script src="content/scripts/timer.js"></script>
 </body>
 </html>
