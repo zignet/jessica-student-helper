@@ -30,15 +30,19 @@ function startTimer() {
             isRunning = true;
             document.getElementById('timer').innerText = formatTime(remainingTime);
             timer = setInterval(() => {
-                if (remainingTime > 0) {
-                    remainingTime--;
-                    document.getElementById('timer').innerText = formatTime(remainingTime);
-                } else {
-                    clearInterval(timer);
-                    isRunning = false;
-                }
+                timerTick()
             }, 1000);
         }
+    }
+}
+
+function timerTick() {
+    if (remainingTime > 0) {
+        remainingTime--;
+        document.getElementById('timer').innerText = formatTime(remainingTime);
+    } else {
+        clearInterval(timer);
+        isRunning = false;
     }
 }
 
