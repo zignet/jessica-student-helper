@@ -1,4 +1,4 @@
-#timerContent {
+timerContent {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
 }
 
 #timer {
-  font-size: 5em;
+  font-size: 7em;
   margin-bottom: 20px;
 }
 
@@ -21,6 +21,14 @@
   cursor: pointer;
   background-color: #7c98b3;
   color: white;
+}
+
+.timerStartButton {
+  background-color: #EF8354
+}
+
+.timerSettings {
+  padding-top: 110px;
 }
 
 .timerInput {

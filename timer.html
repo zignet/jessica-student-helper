@@ -23,19 +23,21 @@
         <div id="home" class="page">
           <div class="headerTitle">Study Timer</div>
         </div>
-        <div id="timerContent" class="content">
-          <div>
-            <input class="timerInput" type="number" id="hours" placeholder="HH" min="0"> :
-            <input class="timerInput" type="number" id="minutes" placeholder="MM" min="0" max="59"> :
-            <input class="timerInput" type="number" id="seconds" placeholder="SS" min="0" max="59">
-          </div>
-
+        <div class="content timerContent">
           <div id="timer">00:00:00</div>
 
-          <div>
-            <button class="timerButton"  onclick="startTimer()">Start</button>
-            <button class="timerButton" onclick="pauseTimer()">Pause</button>
-            <button class="timerButton" onclick="resetTimer()">Reset</button>
+          <div class="timerSettings">
+            <div>
+              <input class="timerInput" type="number" id="hours" placeholder="HH" min="0"> :
+              <input class="timerInput" type="number" id="minutes" placeholder="MM" min="0" max="59"> :
+              <input class="timerInput" type="number" id="seconds" placeholder="SS" min="0" max="59">
+            </div>
+
+            <div>
+              <button class="timerButton timerStartButton"  onclick="startTimer()">Start</button>
+              <button class="timerButton" onclick="pauseTimer()">Pause</button>
+              <button class="timerButton" onclick="resetTimer()">Reset</button>
+            </div>
           </div>
 
         </div>
