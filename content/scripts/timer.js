@@ -2,16 +2,20 @@ let timer;
 let remainingTime;
 let isRunning = false;
 
+// Add avent for when the page is loaded
 document.addEventListener('DOMContentLoaded', function() {
-  const startHours = parseInt(localStorage.getItem("timerStartHours")) || 0;
-  const startMinutes = parseInt(localStorage.getItem("timerStartMinutes")) || 0;
-  const startSeconds = parseInt(localStorage.getItem("timerStartSeconds")) || 0;
-
-  document.getElementById('hours').value = startHours;
-  document.getElementById('minutes').value = startMinutes;
-  document.getElementById('seconds').value = startSeconds;
-
+    initTimer();
 }, false)
+
+function initTimer() {
+    const startHours = parseInt(localStorage.getItem("timerStartHours")) || 0;
+    const startMinutes = parseInt(localStorage.getItem("timerStartMinutes")) || 0;
+    const startSeconds = parseInt(localStorage.getItem("timerStartSeconds")) || 0;
+
+    document.getElementById('hours').value = startHours;
+    document.getElementById('minutes').value = startMinutes;
+    document.getElementById('seconds').value = startSeconds;
+}
 
 function startTimer() {
     if (!isRunning) {
@@ -38,9 +42,11 @@ function startTimer() {
 
 function timerTick() {
     if (remainingTime > 0) {
+        // Update the timer as long as there is time remaining
         remainingTime--;
         document.getElementById('timer').innerText = formatTime(remainingTime);
     } else {
+        // Clear the timer and stop it when timer has reached zero
         clearInterval(timer);
         isRunning = false;
     }
