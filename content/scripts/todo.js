@@ -21,7 +21,7 @@ function initToDo () {
     });
 
     var tasks = document.getElementById('tasks');
-    savedTasks = localStorage.getItem("tasks");
+    savedTasks = getLocalStorage("tasks");
 
     if (savedTasks !== null) {
         tasks.innerHTML = savedTasks;
@@ -55,7 +55,7 @@ function addToDo () {
 
 function saveTasks () {
     var tasks = document.getElementById('tasks').innerHTML;
-    localStorage.setItem("tasks", tasks);
+    setLocalStorage("tasks", tasks);
 }
 
 function setupClickDeleteEvents() {

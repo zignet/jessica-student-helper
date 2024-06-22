@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false)
 
 function initTimer() {
-    const startHours = parseInt(localStorage.getItem("timerStartHours")) || 0;
-    const startMinutes = parseInt(localStorage.getItem("timerStartMinutes")) || 0;
-    const startSeconds = parseInt(localStorage.getItem("timerStartSeconds")) || 0;
+    const startHours = parseInt(getLocalStorage("timerStartHours")) || 0;
+    const startMinutes = parseInt(getLocalStorage("timerStartMinutes")) || 0;
+    const startSeconds = parseInt(getLocalStorage("timerStartSeconds")) || 0;
 
     document.getElementById('hours').value = startHours;
     document.getElementById('minutes').value = startMinutes;
@@ -26,9 +26,9 @@ function startTimer() {
     const minutes = parseInt(document.getElementById('minutes').value) || 0;
     const seconds = parseInt(document.getElementById('seconds').value) || 0;
 
-    localStorage.setItem("timerStartHours", hours.toString());
-    localStorage.setItem("timerStartMinutes", minutes.toString());
-    localStorage.setItem("timerStartSeconds", seconds.toString());
+    setLocalStorage("timerStartHours", hours.toString());
+    setLocalStorage("timerStartMinutes", minutes.toString());
+    setLocalStorage("timerStartSeconds", seconds.toString());
 
 
     remainingTime = (hours * 3600) + (minutes * 60) + seconds;
