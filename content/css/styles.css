@@ -53,9 +53,10 @@ nav ul li a:hover {
   padding-top: 1%;
 }
 
-h1 {
+.headerTitle {
   font-family: Baskerville, serif;
-  font-size: 250%;
+  font-size: xx-large;
+  margin-top: 10px;
 }
 
 img {
@@ -81,11 +82,28 @@ button {
   padding-top: 1%;
   padding-bottom: 1%;
 }
- button:hover {
+
+button:hover {
   opacity: 80%;
  }
 
- svg {
+ .actionButton{
+  position: relative;
+  float: right;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: #EF8354;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  outline: none;
+  width: 20%;
+  height: 45px;
+  border-radius: 5px;
+  font-family: 'Poppins',sans-serif;
+}
+
+svg {
   width: 3%;
   height: 3%;
   fill: #ffffff;
@@ -104,3 +122,36 @@ button {
   clear: both;
 }
 
+main {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container{
+  width: 50%;
+  top: 45%;
+  left: 50%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #4F5D75;
+  border-radius: 10px;
+  margin-top: 30px;
+  min-width: 450px;
+  min-height: 100px;
+  max-height: 500px;
+}
+
+.pageContainer {
+  display: flex;
+  justify-content: center;
+}
+.centered-div {
+  width: 400px;
+  height: 100px;
+  min-width: 450px;
+  min-height: 100px;
+  max-height: 500px;
+  background-color: lightblue;
+}
