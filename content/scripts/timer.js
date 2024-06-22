@@ -1,6 +1,6 @@
 let timer;
 let remainingTime;
-let isRunning = false;
+let isTimerRunning = false;
 
 // Add avent for when the page is loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -18,25 +18,27 @@ function initTimer() {
 }
 
 function startTimer() {
-    if (!isRunning) {
-        const hours = parseInt(document.getElementById('hours').value) || 0;
-        const minutes = parseInt(document.getElementById('minutes').value) || 0;
-        const seconds = parseInt(document.getElementById('seconds').value) || 0;
+    if (isTimerRunning) {
+        return
+    }
 
-        localStorage.setItem("timerStartHours", hours.toString());
-        localStorage.setItem("timerStartMinutes", minutes.toString());
-        localStorage.setItem("timerStartSeconds", seconds.toString());
+    const hours = parseInt(document.getElementById('hours').value) || 0;
+    const minutes = parseInt(document.getElementById('minutes').value) || 0;
+    const seconds = parseInt(document.getElementById('seconds').value) || 0;
+
+    localStorage.setItem("timerStartHours", hours.toString());
+    localStorage.setItem("timerStartMinutes", minutes.toString());
+    localStorage.setItem("timerStartSeconds", seconds.toString());
 
 
-        remainingTime = (hours * 3600) + (minutes * 60) + seconds;
+    remainingTime = (hours * 3600) + (minutes * 60) + seconds;
 
-        if (remainingTime > 0) {
-            isRunning = true;
-            document.getElementById('timer').innerText = formatTime(remainingTime);
-            timer = setInterval(() => {
-                timerTick()
-            }, 1000);
-        }
+    if (remainingTime > 0) {
+        isTimerRunning = true;
+        document.getElementById('timer').innerText = formatTime(remainingTime);
+        timer = setInterval(() => {
+            timerTick()
+        }, 1000);
     }
 }
 
@@ -48,18 +50,18 @@ function timerTick() {
     } else {
         // Clear the timer and stop it when timer has reached zero
         clearInterval(timer);
-        isRunning = false;
+        isTimerRunning = false;
     }
 }
 
 function pauseTimer() {
     clearInterval(timer);
-    isRunning = false;
+    isTimerRunning = false;
 }
 
 function resetTimer() {
     clearInterval(timer);
-    isRunning = false;
+    isTimerRunning = false;
     document.getElementById('timer').innerText = "00:00:00";
 }
 
