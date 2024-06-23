@@ -29,9 +29,8 @@ nav ul li {
   margin-right: 50px;
 }
 
-nav ul li:last-child
-{
-    float:right;
+nav ul li:last-child {
+  float:right;
 }
 
 nav ul li a {
