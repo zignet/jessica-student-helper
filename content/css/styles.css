@@ -10,7 +10,7 @@ body {
 header {
   background-color: #7c98b3;
   color: #fff;
-  padding: 1.5% 30% 1.5% 30%;
+  padding: 1.5% 5% 1.5% 15%;
 }
 
 ul {
@@ -27,6 +27,11 @@ nav ul {
 nav ul li {
   display: inline;
   margin-right: 50px;
+}
+
+nav ul li:last-child
+{
+    float:right;
 }
 
 nav ul li a {
