@@ -2,10 +2,8 @@ let timer;
 let remainingTime;
 let isTimerRunning = false;
 
-// Add avent for when the page is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    initTimer();
-}, false)
+// Add event for when the page is loaded
+document.addEventListener('DOMContentLoaded', initTimer, false)
 
 function initTimer() {
     const startHours = parseInt(getLocalStorage("timerStartHours")) || 0;
@@ -18,31 +16,33 @@ function initTimer() {
 }
 
 function startTimer() {
-    if (isTimerRunning) {
-        return
-    }
+    isTimerRunning = true;
 
-    const hours = parseInt(document.getElementById('hours').value) || 0;
-    const minutes = parseInt(document.getElementById('minutes').value) || 0;
-    const seconds = parseInt(document.getElementById('seconds').value) || 0;
+    if (document.getElementById('timer').innerText === "00:00:00") {
+        const hours = parseInt(document.getElementById('hours').value) || 0;
+        const minutes = parseInt(document.getElementById('minutes').value) || 0;
+        const seconds = parseInt(document.getElementById('seconds').value) || 0;
 
-    setLocalStorage("timerStartHours", hours.toString());
-    setLocalStorage("timerStartMinutes", minutes.toString());
-    setLocalStorage("timerStartSeconds", seconds.toString());
+        setLocalStorage("timerStartHours", hours.toString());
+        setLocalStorage("timerStartMinutes", minutes.toString());
+        setLocalStorage("timerStartSeconds", seconds.toString());
 
+        remainingTime = (hours * 3600) + (minutes * 60) + seconds;
 
-    remainingTime = (hours * 3600) + (minutes * 60) + seconds;
-
-    if (remainingTime > 0) {
-        isTimerRunning = true;
-        document.getElementById('timer').innerText = formatTime(remainingTime);
-        timer = setInterval(() => {
-            timerTick()
-        }, 1000);
+        if (remainingTime > 0) {
+            document.getElementById('timer').innerText = formatTime(remainingTime);
+            timer = setInterval(() => {
+                timerTick()
+            }, 1000);
+        }
     }
 }
 
 function timerTick() {
+    if (!isTimerRunning) {
+        return
+    }
+
     if (remainingTime > 0) {
         // Update the timer as long as there is time remaining
         remainingTime--;
@@ -55,7 +55,6 @@ function timerTick() {
 }
 
 function pauseTimer() {
-    clearInterval(timer);
     isTimerRunning = false;
 }
 
