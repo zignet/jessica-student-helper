@@ -64,17 +64,18 @@ function startTimer() {
 
 // called every second to handle tick event
 function timerTick() {
-    if (isTimerRunning) {
-        if (remainingTime > 0) {
-            // Update the timer as long as there is time remaining
-            remainingTime--;
-            document.getElementById('timer').innerText = formatTime(remainingTime);
-        } 
-        else {
-            // Clear the timer and stop it when timer has reached zero
-            clearInterval(timer);
-            isTimerRunning = false;
-        }
+    if (isTimerRunning == false) {
+        return
+    }
+    if (remainingTime > 0) {
+        // Update the timer as long as there is time remaining
+        remainingTime--;
+        document.getElementById('timer').innerText = formatTime(remainingTime);
+    } 
+    else {
+        // Clear the timer and stop it when timer has reached zero
+        clearInterval(timer);
+        isTimerRunning = false;
     }
 }
 
