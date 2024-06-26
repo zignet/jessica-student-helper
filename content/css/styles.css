@@ -87,41 +87,6 @@ button {
 
 button:hover {
   opacity: 80%;
- }
-
-.actionButton{
-  position: relative;
-  float: right;
-  font-weight: 500;
-  font-size: 16px;
-  background-color: #EF8354;
-  border: none;
-  color: #FFFFFF;
-  cursor: pointer;
-  outline: none;
-  width: 20%;
-  height: 45px;
-  border-radius: 5px;
-  font-family: 'Poppins',sans-serif;
-}
-
-svg {
-  width: 3%;
-  height: 3%;
-  fill: #ffffff;
- }
-
- .column {
-  float: left;
-  width: 33%;
-}
-
-/* Clear floats after the columns */
-.row {
-  padding-top: 30px;
-  content: "";
-  display: table;
-  clear: both;
 }
 
 main {
@@ -143,20 +108,4 @@ main {
   min-width: 450px;
   min-height: 100px;
   max-height: 500px;
-}
-.containerPage{
-  background: #4F5D75
-}
-
-.pageContainer {
-  display: flex;
-  justify-content: center;
-}
-.centered-div {
-  width: 400px;
-  height: 100px;
-    min-width: 450px;
-  min-height: 100px;
-  max-height: 500px;
-  background-color: lightblue;
 }
