@@ -1,0 +1,27 @@
+img {
+    max-width: 35%;
+    max-height: 35%;
+    place-content: center;
+}
+
+img:hover{
+    opacity: 100%;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+  
+button {
+    background-color: #7c98b3;
+    border-radius: 10%;
+    width: 15%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+  
+button:hover {
+    opacity: 80%;
+}
+  
